@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --BG-COLOR1: rgba(35, 43, 50, 0.58);
+  --BG-COLOR2: #152028;
+  --BG-COLOR3: crimson;
+  --BG-COLOR4: #232b32;
+  --BG-COLOR5: rgba(49, 48, 48, 0.412);
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+body .heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(var(--BG-COLOR1), var(--BG-COLOR5)), url(/Images/samara-doole-peaTniZsUQs-unsplash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body .container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body .container h1 {
+  font-size: 4rem;
+  word-spacing: 8px;
+  font-weight: 800;
+  margin-top: 4em;
+}
+body .container .countDownContainers {
+  display: flex;
+  gap: 2em;
+}
+body .container .countDownContainers .countBox {
+  margin-top: 1em;
+  font-size: 3rem;
+  background-color: var(--BG-COLOR2);
+  padding: 0.2em;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #111;
+}
+body .container .countDownContainers span {
+  font-size: 1.4rem;
+  font-weight: 800;
+}/*# sourceMappingURL=style.css.map */
