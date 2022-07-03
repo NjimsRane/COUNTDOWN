@@ -30,15 +30,20 @@ function countDownDate() {
   const mins = 60 * 1000;
   const secs = 1000;
 
-  jour.innerText = Math.floor(DateDifference / days);
-  heurs.innerText = Math.floor((DateDifference % days) / hrs);
+  const day = Math.floor(DateDifference / days);
+  const hour = Math.floor((DateDifference % days) / hrs);
 
-  minutes.innerText = Math.floor((DateDifference % hrs) / mins);
+  const min = Math.floor((DateDifference % hrs) / mins);
 
-  seconds.innerText = Math.floor((DateDifference % mins) / secs);
+  const sec = Math.floor((DateDifference % mins) / secs);
+
+  jour.innerText = formatDate(day);
+  heurs.innerText = formatDate(hour);
+  minutes.innerText = formatDate(min);
+  seconds.innerText = formatDate(sec);
 }
 setInterval(countDownDate, 1000);
 
-// function formatDate(time) {
-//   time < 10 ? `0${time}` : `${time}`;
-// }
+function formatDate(time) {
+  return time < 10 ? `0${time}` : `${time}`;
+}
