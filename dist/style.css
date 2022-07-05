@@ -20,52 +20,78 @@ html {
   --BG-COLOR5: rgba(49, 48, 48, 0.412);
 }
 
+ul {
+  list-style: none;
+}
+
 body {
-  min-height: 100vh;
-  width: 100%;
-}
-body .heroImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(var(--BG-COLOR1), var(--BG-COLOR5)), url(/Images/samara-doole-peaTniZsUQs-unsplash.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-body .container {
-  position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  color: whitesmoke;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-body .container h1 {
-  font-size: 4rem;
-  word-spacing: 8px;
-  font-weight: 800;
-  margin-top: 4em;
-}
-body .container .countDownContainers {
-  display: flex;
-  gap: 2em;
-}
-body .container .countDownContainers .countBox {
-  margin-top: 1em;
-  font-size: 3rem;
+  background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
   background-color: var(--BG-COLOR2);
-  padding: 0.2em;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px #111;
+  background-size: 16px 16px;
+  color: whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-body .container .countDownContainers span {
-  font-size: 1.4rem;
-  font-weight: 800;
+body h1 {
+  font-size: 5rem;
+  margin-block: 2.5em 1em;
+  text-align: center;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  text-align: center;
+}
+body .container li {
+  margin-inline: 1em;
+}
+body .container li .box {
+  background-color: var(--BG-COLOR2);
+  border: 2px solid rgb(0, 20, 27);
+  box-shadow: 1px 1px 2px black, 2px 4px 2px black, 2px 2px 3px black;
+  margin-bottom: 1em;
+  padding-inline: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 3px;
+  width: 15em;
+}
+body .container li .box .corner1,
+body .container li .box .corner2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5em;
+  height: 1em;
+  background: linear-gradient(#111, #333, #fff, #333, #111);
+}
+body .container li .box .corner1 {
+  left: -0.2em;
+}
+body .container li .box .corner2 {
+  right: -0.2em;
+}
+body .container li .box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.15em;
+  top: 50%;
+  left: 0;
+  background-color: #111;
+}
+body .container li .box h4 {
+  font-size: 8rem;
+}
+body .container li span {
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */

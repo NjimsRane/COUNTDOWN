@@ -1,24 +1,27 @@
 //i have to settle the coming date
-const targetingDate = "1 jan 2023";
+const targettedgDate = "1 jan 2023";
 
-const jour = document.querySelector(".jour");
-const heurs = document.querySelector(".heurs");
+const jour = document.querySelector(".jours");
+const heurs = document.querySelector(".heures");
 const minutes = document.querySelector(".minutes");
-const seconds = document.querySelector(".seconds");
+const seconds = document.querySelector(".secondes");
 
 //function
 
 function countDownDate() {
-  /*coming date and current have to be convert to number so we can make calculations with . i use getTime() for that
+  /*coming  and current date have to be convert to number so we can make calculations with . i use getTime() for that
    */
+
   //current date
   const currentDate = new Date().getTime();
-  const targetingDateInNumber = new Date(targetingDate).getTime();
+  const targettedDateInNumber = new Date(targettedgDate).getTime();
+
   /* to know the number of days , we have to find the difference between currentDate and targetingDateInNumber
    */
-  const DateDifference = targetingDateInNumber - currentDate;
 
-  /*DateDifference is in milliseconds , so we have to convert it in to days, hours , minutes , seconds...we know that :
+  const DateDifference = targettedDateInNumber - currentDate;
+
+  /*DateDifference is in milliseconds , so we have to convert it in to days, hours , minutes , seconds...we know that, for that we have to find how many milliseconds are in days , hours , minutes ,seconds :
 
   1secs = 1000ms;
   1min = 60 secs;
@@ -43,7 +46,9 @@ function countDownDate() {
   seconds.innerText = formatDate(sec);
 }
 setInterval(countDownDate, 1000);
-
+/*
+to put date in a two digit numbers when it is less than 10
+*/
 function formatDate(time) {
   return time < 10 ? `0${time}` : `${time}`;
 }
